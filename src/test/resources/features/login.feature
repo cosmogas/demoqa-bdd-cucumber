@@ -1,0 +1,15 @@
+Feature: Login to demoqa
+
+  Scenario: Successful login
+    Given user opens login page
+    When user logs in with username "testuser" and password "Test1234!"
+    Then dashboard should show username "testuser"
+
+  Scenario: User adds and verifies a new table entry
+    Given user opens web tables page
+    When user adds new person with name "Ivan" and email "ivan@example.com"
+    Then table should contain entry with name "Ivan" and email "ivan@example.com"
+
+
+
+
