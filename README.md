@@ -7,3 +7,15 @@ Automated UI tests for [demoqa.com](https://demoqa.com) using:
 - ✅ **JUnit** — test runner integration
 
 ---
+🚀 Running Tests
+To execute all tests:
+
+bash
+Copy
+Edit
+./gradlew test
+Or in IntelliJ IDEA:
+
+Right-click TestRunner.java
+
+Select Run
