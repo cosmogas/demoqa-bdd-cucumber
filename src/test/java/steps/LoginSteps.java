@@ -22,7 +22,27 @@ public class LoginSteps {
     public void checkUsername(String username) {
         $("#userName-value").shouldHave(text(username));
     }
+
+    @Given("user is logged in")
+    public void userIsLoggedIn() {
+        open("https://demoqa.com/login");
+
+
+        $("#userName").should(appear);
+        $("#password").should(appear);
+
+
+        $("#userName").setValue("testuser");
+        $("#password").setValue("Test1234!");
+        $("#login").click();
+
+        $("#userName-value").should(appear).shouldHave(text("TestUser"));
+    }
+
+
 }
+
+
 
 
 

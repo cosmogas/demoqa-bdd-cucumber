@@ -10,6 +10,26 @@ Feature: Login to demoqa
     When user adds new person with name "Ivan" and email "ivan@example.com"
     Then table should contain entry with name "Ivan" and email "ivan@example.com"
 
+  Scenario: User deletes a table entry
+    Given user opens web tables page
+    When user deletes entry with name "Cierra"
+    Then table should not contain entry with name "Cierra"
+
+
+  Scenario: Verify ToolsQA home page title
+    Given user opens ToolsQA home page
+    Then page title should be "DEMOQA"
+
+
+  Scenario: User sees Elements section on home page
+    Given user opens ToolsQA home page
+    Then section "Elements" should be visible
+
+
+
+
+
+
 
 
 
