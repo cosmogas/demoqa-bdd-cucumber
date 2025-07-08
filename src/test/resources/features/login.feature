@@ -25,6 +25,13 @@ Feature: Login to demoqa
     Given user opens ToolsQA home page
     Then section "Elements" should be visible
 
+  Scenario: Invalid login shows error
+    Given user opens login page for negative test
+    When user attempts to login with invalid username "invalidUser" and password "wrongPass123"
+    Then error message "Invalid username or password!" should appear on login page
+
+
+
 
 
 
