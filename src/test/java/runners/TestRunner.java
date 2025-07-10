@@ -6,7 +6,9 @@ import org.junit.platform.suite.api.*;
 @IncludeEngines("cucumber")
 @SelectClasspathResource("features")
 @ConfigurationParameter(key = "cucumber.glue", value = "steps,hooks")
-@ConfigurationParameter(key = "cucumber.plugin", value = "pretty")
+@ConfigurationParameter(
+        key = "cucumber.plugin",
+        value = "pretty, io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
+)
 public class TestRunner {}
-
 
